@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 #include <math.h>
 int main (){
     uint16_t  b=0,a=11,d=0,c=16;  //d=1 Ausgabe aller Stellen
