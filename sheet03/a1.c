@@ -29,6 +29,42 @@ int main(){
             printf(" %d",y);
             y=y-1;
         }
+        if (a>0||a<-1)
+         printf(" ");
+        m=m-1;
+    } ;
+        if (a>0||a<-1) {
+            
+        
+        printf("|");
+        if (a%2==0) {
+            printf(" %d",y);
+            y=y-1;
+        }
+        }
+        else{
+            
+            if (a==0) {
+                m=o;
+                while(m>0)    {
+                        printf("-");
+                    m=m-1;
+                } ;
+                printf("+");
+                m=o;
+                while(m>0)    {
+                    printf("-");
+                    m=m-1;
+                } ;
+                printf("> x");
+
+            }
+            if (a==-1) {
+                printf("-1");
+                y=-1;
+            }
+            
+
         
         a=a-1;
         printf("\n");
