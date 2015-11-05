@@ -1,36 +1,37 @@
 #include <stdio.h>
 
 int main(){
-	int n=7,m,o,a,y;	// n Zahl zum Eingeben ; m Zahl für die Leerzeichen wird runtergzählt ;o ist m nur fest ; a ist 2n zum anzeigen der Zahlen an der Y Achse; y benutzen wir um jede 2 Zeile den Y Wert auszugeben
-	o=3*n+1;
-	m=o;
-	a=2*n;
-	y=n;
-	do{				// y ausgeben	
-	printf(" ");
-	m=m-1;
-	}while(m>=0);
-	printf("y\n");
-	m=o;
-	do{				// ^ ausgeben
-	printf(" ");
-	m=m-1;
-	}while(m>=0);
-	printf("^\n");
-	m=o+1;
-	while(a>2*-n-2){	// Achse
-		
-		while(m>0){
-		printf(" ");
-		m=m-1;
-		};
-		printf("|");
-		if (a%2==0) {
-            printf(" %d",y);
-            y=y-1;
-        }
-        if (a>0||a<-1)
-         printf(" ");
+    int n=10,m,o,y=n,a=2*n,x=-n;
+    o=3*n+1;
+    m=o;                //Anzahl der Leerzeichen
+    if (n<30) {
+        
+    
+    
+    {
+    
+    do {
+        printf(" ");
+        m=m-1;
+    } while(m>0);
+    printf("y\n");
+    
+    m=o;
+    do {
+        printf(" ");
+        m=m-1;
+    } while(m>0);
+    printf("^\n");
+}               //Oberen 2 Zeilen
+    m=o;
+    
+    
+    while (a>-2*n-2) {
+    
+        
+     while(m>0)    {
+       if (a>0||a<-1)
+        printf(" ");
         m=m-1;
     } ;
         if (a>0||a<-1) {
@@ -38,7 +39,10 @@ int main(){
         
         printf("|");
         if (a%2==0) {
-            printf(" %d",y);
+            if (y>0) {
+                printf(" ");
+            }
+            printf("%d",y);
             y=y-1;
         }
         }
@@ -60,15 +64,39 @@ int main(){
 
             }
             if (a==-1) {
-                printf("-1");
+                while (x<=n) {
+                    
+                    if (x>=0) {
+                        printf(" ");
+                    }
+
+                    if (x==0) {
+                        printf("| ");
+                        x=x+1;
+                    }
+                    else {
+                printf("%d",x);
+                        if (x>=-9&&x<=9) {
+                            printf(" ");
+                        }
+                                        x=x+1;
+                    }
+                }
                 y=-1;
             }
             
-
+          
+        
+        }
         
         a=a-1;
         printf("\n");
-	m=o+1; 
-	}
-return 0;
-}
+        m=o;
+        
+    
+    }}
+    else
+        printf("Fenster zu klein, wähle kleineres N! :D\n\n");
+    
+    return 0;
+    }
