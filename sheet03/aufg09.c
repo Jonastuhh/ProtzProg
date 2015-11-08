@@ -52,13 +52,12 @@ int main() {
            stroke-width=\"5\" />\n",j,l,k,l);
     } while (j!=250);
     
-    j=230;l=180;k=10;
     int m=0;                    //kreisel
     while (m!=360) {
         m=m+10 ;
         
         printf("<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" stroke=\"#CD6600\" \
-               stroke-width=\"3 \" transform=\"rotate(%d 250 200)\" />\n",j-k,l-k,j+k,l+k,m);
+               stroke-width=\"3 \" transform=\"rotate(%d 250 200)\" />\n",220,170,240,190,m);
     }
 
    
