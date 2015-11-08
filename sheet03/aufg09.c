@@ -60,6 +60,7 @@ int main() {
                stroke-width=\"3 \" transform=\"rotate(%d 250 200)\" />\n",220,170,240,190,m);
     }
 
+int y2=400,a=10;		//weiße Strahlen
    do{
 	  x1=x1+5;
 	  x2=x2-10;
