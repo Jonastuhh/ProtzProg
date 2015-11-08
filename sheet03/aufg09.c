@@ -60,7 +60,15 @@ int main() {
                stroke-width=\"3 \" transform=\"rotate(%d 250 200)\" />\n",220,170,240,190,m);
     }
 
-   
+   do{
+	  x1=x1+5;
+	  x2=x2-10;
+	  y=y+5;
+	  y2=y2+5;
+	  a=a-1;
+	  printf("<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" stroke=\"white\" \
+  stroke-width=\"5\" />\n", x1, y, x2, y2);
+  } while (a>0);
     
     
     
