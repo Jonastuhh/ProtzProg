@@ -2,9 +2,9 @@
 #include <math.h>
 #include <stdint.h>
 
-long double k,e,v=1,x,y,z,F,a,c,n,Summe;
-
-long double f(x,k){
+long double e,v=1,x,y,z,F,a,c,n,Summe,abbruch,pi,ausgabeX;
+int k,l;
+long double f(long double x,int k){
 
     
     z=x;
@@ -30,18 +30,32 @@ long double f(x,k){
 }
 
 int main (){
-    x=2.0;
+    pi=3.14159265358979323846264338328;
+    printf("x=");
+    scanf("%Lf",&x);
+    ausgabeX=x;
+    while (x>2*pi) {
+        x=x-2*pi;
+    }
+    while (x<-2*pi) {
+        x=x+2*pi;
+    }
     k=10;
-    for (k; k>=0; k=k-1) {
+    y=0;
+    for (k=0; k<10; k=k+1) {
+        abbruch=y;
         y=f(x,k);
+        if (fabsl(y-abbruch)<=e-20) {
+            k=10;
+        }
         Summe=Summe+y;
+        
     }
     
     
     
     
-    printf("%.20Lf",Summe);
+    printf("sin(%.2Lf)=%.20Lf",ausgabeX,Summe);
     printf("\n");
     return 0;
 }
-
