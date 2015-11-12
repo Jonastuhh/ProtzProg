@@ -5,14 +5,15 @@
 long double k,x,y,e,z,l;
 long double f(long double x, int k){
 	
+	x=(x-1);
 	z=x;
-	l=2*k+1;
-	for(e=1; e<(l); e=e+1){						//x^(2k+1)
+	l=k+1;
+	for(e=1; e<(l); e=e+1){						
 		x=z*x;
 	}
-	x=x/l;										//(x^(2k+1))/(2k+1)
+	x=x/l;										
 	
-	y=x;										//(-1)^k
+	y=x;										
 	if(k%2==1){
 		y=-y;
 	}
@@ -21,11 +22,10 @@ long double f(long double x, int k){
 }
 
 int main(){
-	x=3;
-	k=1;
+	x=1;
+	k=2;
 	
-	for(k=0)
 	int y = f(x,k);
-	printf("arctan(x) = %d\n", y);
+	printf("ln(%lf) = %lf\n",x, y);
 	
 }
