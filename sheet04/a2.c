@@ -59,7 +59,7 @@ int Zahlen (int x1,int y1, int Zahl){
 
 int main (){
 
-    int n=10,x1,x2,y1,y2,g ;  // n gibt man ein, g gesammt größe ; k zum zählen
+    int n=8,x1,x2,y1,y2,g ;  // n gibt man ein, g gesammt größe ; k zum zählen
     int Abstand=40;             //zum Rand und zwischen den Zahlen
     int Zahl;
     
@@ -115,6 +115,8 @@ int main (){
         
     Zahlen(x1, y1, Zahl);
         
+    Linie(x1+8, y1-20, x1+8, y1-30);
+        
         x1=x1+Abstand;
     Zahl++;
     }
@@ -129,14 +131,11 @@ int main (){
         
         Zahlen(x1, y1, Zahl);
         
+        Linie(x1-20, y1-5, x1-10, y1-5);
+        
         y1=y1-Abstand;
         Zahl++;
     }
-    
-
-    
-    
-    
     
     printf("</svg>");
     return 0;
