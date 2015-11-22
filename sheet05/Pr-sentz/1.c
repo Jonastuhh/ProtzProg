@@ -18,7 +18,7 @@ int main (){
 	for(i=0;i<NMAX;i++){
 		scanf("%d",&B[i]);	
 	}
-	dotprod(&A[NMAX-1],&B[NMAX-1]);
+	s=dotprod(A,B);
 	printf("%d",s);
 	return(0);
 }
