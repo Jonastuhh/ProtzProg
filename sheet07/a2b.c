@@ -7,7 +7,7 @@
 #define BMP_HEIGHT 1600
 #define BMP_WIDTH 2560
 
-#define n_max 300
+#define n_max 200
 #define BLACK 0x00000000
 #define WHITE 0x00FFFFFF
 #define RED   0x00FF0000
@@ -77,28 +77,30 @@ int main() {
   uint32_t *data = NULL;
     data=(uint32_t*)malloc(BMP_WIDTH*BMP_HEIGHT*sizeof(uint32_t));
 
-    double x1,y1,color;   //x1 Realteil von z, y1 Imaginärteil
-/*
+    double x1,y1,color,f=1.0;   //x1 Realteil von z, y1 Imaginärteil
+
     double x_min=0.435396403;
     double x_max=0.451687191;
     double y_min=0.367981352;
     double y_max=0.380210061;
-    */
+    f=0.3;
     
+    /*
     double x_min=-3;
     double x_max=3;
     double y_min=-2;
     double y_max=2;
-    
+    */
+ 
     for (int i=0; i<BMP_HEIGHT; i++) {
         y1=i;
         y1=(y_max-y_min)*y1/BMP_HEIGHT+y_min;
-        if (i%(BMP_HEIGHT/100)==0)printf("%.f%%\n",i*0.0625+1);   //Fortschrittsanzeige
+        if (i%(BMP_HEIGHT/100)==0)printf("%.f%%\n",i/(BMP_HEIGHT*0.01)+1);   //Fortschrittsanzeige
         
         for (int j=0; j<BMP_WIDTH; j++) {
             x1=j;
             x1=(x_max-x_min)*x1/BMP_WIDTH+x_min;
-            int n=mandel(x1,y1, 0,0,1);
+            int n=mandel(x1,y1, 0,0,1)*f;
             
             if (n<=20) {
                 color=n*12;
